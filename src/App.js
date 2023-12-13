@@ -43,10 +43,10 @@ function App() {
 
         {/* Components for desktop */}
         <div className='hidden md:flex gap-6 text-white fontS text-lg items-center'>
-          <span>home</span>
-          <span>shop</span>
-          <span>about</span>
-          <span>contact</span>
+          <span className='cursor-pointer navComp relative'>home</span>
+          <span className='cursor-pointer navComp relative'>shop</span>
+          <span className='cursor-pointer navComp relative'>about</span>
+          <span className='cursor-pointer navComp relative'>contact</span>
         </div>
 
         { isMenuOpen && 
@@ -75,16 +75,16 @@ function App() {
             <img src={`/images/desktop-image-hero-${heroIndex}.jpg`} className='hidden sm:block' />
           </div>
 
-          <div className='flex bg-black absolute gap-4 md:gap-8 bottom-0 right-0 md:-right-[135.33px]'> {/* Left and Right arrow*/}
-            <span className='p-4 md:p-5'
+          <div className='flex bg-black absolute bottom-0 right-0 md:-right-[135.33px]'> {/* Left and Right arrow*/}
+            <span className='flex items-center justify-center p-5 md:p-6 md:px-7 hover:bg-zinc-700 cursor-pointer'
               onClick={()=>{shiftHeroIndex('-')}}
             >
-              <img src='/images/icon-angle-left.svg' className='h-3 md:h-5'/>
+              <img src='/images/icon-angle-left.svg' className='h-4 md:h-5'/>
             </span>
-            <span className='p-4 md:p-5'
+            <span className='flex items-center justify-center p-5 md:p-6 md:px-7 hover:bg-zinc-700 cursor-pointer'
               onClick={()=>{shiftHeroIndex('+')}}
             >
-              <img src='/images/icon-angle-right.svg' className='h-3 md:h-5'/>
+              <img src='/images/icon-angle-right.svg' className='h-4 md:h-5'/>
             </span>
           </div>
         </section>
@@ -93,7 +93,7 @@ function App() {
           <div className='py-10 px-5 md:flex flex-col justify-center md:h-full gap-2 md:px-24'>
             <h1 className='fontL text-3xl leading-8 md:text-5xl'>{textFile[heroIndex].heading}</h1>
             <p className='text-sm mt-4 text-gray-400 fontS'>{textFile[heroIndex].paragraph}</p>
-            <button className='mt-4 flex items-center tracking-[7px] text-sm fontM'>SHOP NOW <img src='/images/icon-arrow.svg' alt='arrow icon' className='ml-2 w-10'/></button>
+            <button className='mt-4 flex items-center tracking-[7px] text-sm fontM cursor-pointer hover:text-zinc-500'>SHOP NOW <img src='/images/icon-arrow.svg' alt='arrow icon' className='ml-2 w-10'/></button>
           </div>
         </section>
 
