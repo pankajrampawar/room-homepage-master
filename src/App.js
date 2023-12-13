@@ -32,7 +32,7 @@ function App() {
   return (
   <div className='relative md:h-screen'>
 
-    <header className='p-5 flex  items-center absolute w-full mt-3 z-10'>
+    <header className='p-5 flex  items-center absolute w-full mt-3 z-10 md:gap-16'>
         <div className='sm:hidden'> 
           <img src='/images/icon-hamburger.svg' /> 
         </div>
@@ -41,13 +41,21 @@ function App() {
           <img src='/images/logo.svg' alt='logo'/>
         </div>
 
+        {/* Components for desktop */}
+        <div className='hidden md:flex gap-6 text-white fontS text-lg items-center'>
+          <span>home</span>
+          <span>shop</span>
+          <span>about</span>
+          <span>contact</span>
+        </div>
+
         { isMenuOpen && 
-          <div className='absolute top-0 left-0 w-full bg-white px-5 py-7 flex items-center'>
+          <div className='absolute top-0 left-0 w-full bg-white px-5 py-7 flex items-center md:hidden'>
             <div onClick={toggleMenu}>
               <img src='/images/icon-close.svg' />
             </div>
 
-            <div className='flex gap-4 items-center justify-center w-full flex-wrap'>
+            <div className='flex gap-4 items-center justify-center w-full flex-wrap md:hidden'>
               <span>Home</span>
               <span>Shop</span>
               <span>About</span>
