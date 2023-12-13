@@ -2,5 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
 
+.fontS  {
+    font-family: 'League Spartan';
+    font-weight: 500
+}
 
+.fontM {
+    font-family: 'League Spartan';
+    font-weight: 600;
+}
+
+.fontL {
+    font-family: 'League Spartan';
+    font-weight: 700;
+}

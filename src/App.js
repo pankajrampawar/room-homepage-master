@@ -30,14 +30,14 @@ function App() {
   }
 
   return (
-  <div className='relative'>
+  <div className='relative md:h-screen'>
 
     <header className='p-5 flex  items-center absolute w-full mt-3 z-10'>
-        <div> 
+        <div className='sm:hidden'> 
           <img src='/images/icon-hamburger.svg' /> 
         </div>
 
-        <div className='w-full flex justify-center' onClick={toggleMenu}>
+        <div className='w-full flex justify-center md:w-auto' onClick={toggleMenu}>
           <img src='/images/logo.svg' alt='logo'/>
         </div>
 
@@ -57,49 +57,52 @@ function App() {
         }
     </header>
 
-    <main>
-      <section>
-        <section className='relative'>
+    <main className=''>
 
+      <section className='sm:flex'>
+        
+        <section className='relative'>
           <div>  {/*hero image*/}
-            <img src={`/images/mobile-image-hero-${heroIndex}.jpg`}/>
+            <img src={`/images/mobile-image-hero-${heroIndex}.jpg`} className='w-full sm:hidden'/>
+            <img src={`/images/desktop-image-hero-${heroIndex}.jpg`} className='hidden sm:block' />
           </div>
 
-          <div className='flex bg-black absolute gap-4 bottom-0 right-0'> {/* Left and Right arrow*/}
-            <span className='p-4'
+          <div className='flex bg-black absolute gap-4 md:gap-8 bottom-0 right-0 md:-right-[135.33px]'> {/* Left and Right arrow*/}
+            <span className='p-4 md:p-5'
               onClick={()=>{shiftHeroIndex('-')}}
             >
-              <img src='/images/icon-angle-left.svg' className='h-3'/>
+              <img src='/images/icon-angle-left.svg' className='h-3 md:h-5'/>
             </span>
-            <span className='p-4'
+            <span className='p-4 md:p-5'
               onClick={()=>{shiftHeroIndex('+')}}
             >
-              <img src='/images/icon-angle-right.svg' className='h-3'/>
+              <img src='/images/icon-angle-right.svg' className='h-3 md:h-5'/>
             </span>
           </div>
-        
         </section>
 
-        <section>
-          <div>
-            <h1>{textFile[heroIndex].heading}</h1>
-            <p>{textFile[heroIndex].paragraph}</p>
-            <button>SHOP NOW <img src='/images/icon-arrow.svg' alt='arrow icon' /></button>
+        <section className='md:w-1/2'>
+          <div className='py-10 px-5 md:flex flex-col justify-center md:h-full gap-2 md:px-24'>
+            <h1 className='fontL text-3xl leading-8 md:text-5xl'>{textFile[heroIndex].heading}</h1>
+            <p className='text-sm mt-4 text-gray-400 fontS'>{textFile[heroIndex].paragraph}</p>
+            <button className='mt-4 flex items-center tracking-[7px] text-sm fontM'>SHOP NOW <img src='/images/icon-arrow.svg' alt='arrow icon' className='ml-2 w-10'/></button>
           </div>
         </section>
+
       </section>
 
-      <section>
+      <section className='md:flex h-full md:justify-between'>
         <div>
-          <img src='/images/image-about-dark.jpg' alt='black chair set'/>
+          <img src='/images/image-about-dark.jpg' alt='black chair set' className='w-full sm:hidden'/>
+          <img src='/images/image-about-dark.jpg' alt='black chair set' className='hidden sm:block h-full' />
         </div>
 
-        <div>
-          <h2>
+        <div className='py-10 px-5 md:w-1/3 md:py-16'>
+          <h2 className='tracking-widest fontM text-lg md:text-2xl'>
             About our furniture
           </h2>
 
-          <p>
+          <p className='text-sm fontS text-gray-400 mt-5'> 
             Our multifunctional collection blends design and function to suit your individual taste.
             Make each room unique, or pick a cohesive theme that best express your interests and what
             inspires you. Find the furniture pieces you need, from traditional to contemporary styles
@@ -108,7 +111,8 @@ function App() {
         </div>
 
         <div>
-          <img src='/images/image-about-light.jpg' alt='white chair'/>
+          <img src='/images/image-about-light.jpg' alt='white chair' className='w-full sm:hidden'/>
+          <img src='/images/image-about-light.jpg' alt='white chair' className='hidden sm:block h-full' />
         </div>
       </section>
       
