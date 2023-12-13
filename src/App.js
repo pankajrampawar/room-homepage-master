@@ -104,7 +104,7 @@ function App() {
 
         <div className='py-10 px-5 md:w-1/3 md:py-16'>
           <h2 className='tracking-widest fontM text-lg md:text-2xl'>
-            About our furniture
+            ABOUT OUR FURNITURE
           </h2>
 
           <p className='text-sm fontS text-gray-400 mt-5'> 
