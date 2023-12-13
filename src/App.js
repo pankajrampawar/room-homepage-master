@@ -36,7 +36,7 @@ function App() {
           <img src='/images/icon-hamburger.svg' /> 
         </div>
 
-        <div className='w-full flex justify-center md:w-auto' onClick={toggleMenu}>
+        <div className='w-full flex justify-center md:w-auto md:pl-6' onClick={toggleMenu}>
           <img src='/images/logo.svg' alt='logo'/>
         </div>
 
