@@ -1,5 +1,4 @@
 import React from 'react';
-import { lazy } from 'react';
 import textFile from "./components/textFile"
 
 function App() {
@@ -32,7 +31,7 @@ function App() {
   return (
   <div className='relative md:h-screen'>
 
-    <header className='p-5 flex  items-center absolute w-full mt-3 z-10 md:gap-16'>
+    <header className='p-5 pt-7 flex  items-center absolute w-full z-10 md:gap-16'>
         <div className='sm:hidden'> 
           <img src='/images/icon-hamburger.svg' /> 
         </div>
