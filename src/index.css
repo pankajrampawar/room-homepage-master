@@ -36,3 +36,14 @@
 .navComp:hover::after {
     width: 70%;
 }
+
+.drawer {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: 0.2s ease-in-out;
+}
+
+.drawerShow {
+    opacity: 1;
+    transform: translateY(0);
+}

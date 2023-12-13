@@ -49,8 +49,7 @@ function App() {
           <span className='cursor-pointer navComp relative'>contact</span>
         </div>
 
-        { isMenuOpen && 
-          <div className='absolute top-0 left-0 w-full bg-white px-5 py-7 flex items-center md:hidden'>
+          <div className={`absolute top-0 left-0 w-full bg-white px-5 py-7 flex items-center md:hidden drawer ${isMenuOpen ? 'drawerShow' : ''} `}>
             <div onClick={toggleMenu}>
               <img src='/images/icon-close.svg' />
             </div>
@@ -62,7 +61,6 @@ function App() {
               <span>Contact</span>
             </div>
           </div>
-        }
     </header>
 
     <main className=''>
